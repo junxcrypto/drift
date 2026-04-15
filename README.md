@@ -13,7 +13,7 @@ Hỗ trợ 3 sàn: **SoDEX**, **Dango Exchange**, và **Decibel**.
 ## System Architecture
 
 <p align="center">
-  <img src="https://i.imgur.com/your-architecture-diagram.png" alt="DRIFT Full System Architecture" width="800"/>
+  <img src="design.png" alt="DRIFT Full System Architecture" width="800"/>
 </p>
 
 ---
