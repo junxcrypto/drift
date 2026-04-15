@@ -10,6 +10,14 @@ Hỗ trợ 3 sàn: **SoDEX**, **Dango Exchange**, và **Decibel**.
 
 ---
 
+## Dashboard
+
+<p align="center">
+  <img src="dashboard.png" alt="DRIFT Full System Architecture" width="800"/>
+</p>
+
+---
+
 ## System Architecture
 
 <p align="center">
