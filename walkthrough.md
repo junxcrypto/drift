@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="drift.png" alt="DRIFT logo" width="480"/>
+  <img src="logo.png" alt="DRIFT logo" width="480"/>
 </p>
 
 # Walkthrough — DRIFT
