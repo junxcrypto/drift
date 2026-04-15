@@ -29,8 +29,8 @@ Mục tiêu: **luôn luôn trade**, không bao giờ skip.
 - Confidence chỉ dùng để scale size, không để gate
 - MM bias (ping-pong + inventory) điều chỉnh direction
 - Dynamic TP dựa trên spread thực tế
-- Exit: SL 5% → Dynamic TP → Early profit → Time limit (1–3 phút)
-- Cooldown cố định 30s sau mỗi trade
+- Exit: SL 5% → Dynamic TP → Early profit → Time limit (3–10 phút)
+- Cooldown 2-5 phút sau mỗi trade
 
 ### Trade Mode (`MODE=trade`) — Tối đa hóa win rate
 Mục tiêu: **chỉ vào khi có edge rõ ràng**.
@@ -43,6 +43,7 @@ Mục tiêu: **chỉ vào khi có edge rõ ràng**.
 - Exit: SL 5% hoặc TP 5% — không có time exit
 - Adaptive cooldown dựa trên losing streak + chop score
 
+### Tất cả giá trị có thể thay đổi lúc runtime trên dashboard 
 ---
 
 ## Kiến trúc tổng quan
@@ -90,7 +91,7 @@ bot.ts (DRIFT)
 2. Dynamic TP (MM): `max(spreadBps/10000 × price × 1.5, feeFloor)`, capped $2.0
 3. Farm TP: `FARM_TP_USD = $0.5`
 4. Early profit: hold ≥ 60s AND pnl ≥ $0.3
-5. Time exit: sau hold time (1–3 phút), chờ thêm 15s nếu đang phục hồi
+5. Time exit: sau hold time (3–10 phút), chờ thêm 15s nếu đang phục hồi
 
 **Cooldown**: cố định 30s (`FARM_COOLDOWN_SECS`).
 
